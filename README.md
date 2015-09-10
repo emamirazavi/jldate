@@ -8,12 +8,12 @@ BUG or issue:
 UTC methods of date class of JS have rewritten with fake.
 you can help me to implement it correctly !!! :)
 
-### TESTED previously with:
+### tested previously with:
 1. bootstrap datetime picker
 2. jQuery datetime picker
 3. fullcalendar
 
-### Now TESTED with:
+### Now tested with:
 1. fullcalendar @see fullcalendar* folder
 2. somewhat moment
 
@@ -22,7 +22,7 @@ It's enough you replace jlDate with Date classname of JS
 but you must escape from UTC methods, it's not implemented in jlDate for now
 @see fullcalendar and moment sample
 
-### Tested with
+### list of supports
 * [Fullcalendar](https://github.com/arshaw/fullcalendar)
 * [Moment](https://github.com/moment/moment)
 * [jQuery datetimepicker](http://plugins.jquery.com/datetimepicker/)
