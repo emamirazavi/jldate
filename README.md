@@ -2,7 +2,7 @@
 
 ## About
 This project named jldate created by S.Mohammad Emami Razavi. In fact i wanted to create an emulator for JS Date class
-to modify all calendars to support jalali dates very quick. It uses the `BSD 3-Clause License`. Good luck and under God.
+to modify all calendars to support jalali dates very quickly. It uses the `BSD 3-Clause License`. Good luck and under God.
 
 BUG or issue:
 UTC methods of date class of JS have rewritten with fake.
