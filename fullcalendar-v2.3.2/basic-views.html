@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<link href='./fullcalendar.css' rel='stylesheet' />
+		<link href='./fullcalendar.print.css' rel='stylesheet' media='print' />
+		<script src='../jalaliDate.js'></script>
+		<script src='../tp/jquery.js'></script>
+		<script src='../tp/moment.js'></script>
+
+		<script src='./fullcalendar.js'></script>
+		<script src='./fa.js'></script>
+		<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			timezone:'local',
+			isRTL:true,
+			firstDay:6,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			//now: function(){
+			//	var dt = new jlDate();
+			//	return dt.getFullYear()+'-'+(dt.getMonth()+1>9?dt.getMonth()+1:'0'+(dt.getMonth()+1))+'-'+(dt.getDate()>9?dt.getDate():'0'+dt.getDate());
+			//},//'1394-06-15',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '1394-06-01'
+				},
+				{
+					title: 'Long Event',
+					start: '1394-06-15',
+					end: '1394-06-17'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '1394-06-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '1394-06-09T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '1394-06-10',
+					end: '1394-06-13'
+				},
+				{
+					title: 'Meeting',
+					start: '1394-06-12T10:30:00',
+					end: '1394-06-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '1394-06-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '1394-06-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '1394-06-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '1394-06-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '1394-06-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '1394-06-28'
+				}
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
