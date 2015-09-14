@@ -18,8 +18,8 @@ you can help me to implement it correctly !!! :)
 2. somewhat moment
 
 ### HOW IT WORKS:
-It's enough you replace jlDate with Date classname of JS
-but you must escape from UTC methods, it's not implemented in jlDate for now
+It's enough you replace Date classname of JS with jlDate 
+also you must escape from UTC methods, it's not implemented in jlDate for now.
 @see fullcalendar and moment sample
 
 ### list of supports
