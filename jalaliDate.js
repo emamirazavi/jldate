@@ -258,10 +258,11 @@ function jlDate(year, month, day, hours, minutes, seconds, milliseconds)
     {
             this.date = date;//new Date(date.getFullYear(), date.getMonth(), date.getDate());
             var jDate = this.gregorian_to_jalali(date.getFullYear(), date.getMonth(), date.getDate());
-            
+
             this.year = jDate[0];
             this.month = jDate[1];
             this.day = jDate[2];
+
             this.hours = date.getHours();
             this.minutes = date.getMinutes();
             this.seconds = date.getSeconds();
@@ -409,7 +410,8 @@ function jlDate(year, month, day, hours, minutes, seconds, milliseconds)
             month += change[1];
             ap = this.jToG(year, month, 1, hours, minutes, seconds, milliseconds);
             this.setAP(ap);
-            this.setDate(day);
+
+            this.setDate(day + (this.day != 1 ? this.day - 1 : 0));
         }
         else if(!this.isInteger(year))
         {
@@ -418,7 +420,7 @@ function jlDate(year, month, day, hours, minutes, seconds, milliseconds)
         else if(this.isInteger(year))
         {
             // i assume just year has been set
-            if (year > 0 && year < 1450) {
+            if (year > 0 && year < 1600) {
                 // you should set other propeties like month and day
                 ap = this.jToG(year, 0, 1, 0, 0, 0, 0);
                 this.setAP(ap);
